@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+
+  <header>
+    <nav class="navigation-menu">
+      <ul>
+        <li><a href="../../index.html">Strona główna</a></li>
+        <li><a href="../pages/login.html">Login</a></li>
+        <li><a href="../pages/konkurs.html">Konkurs</a></li>
+        <li><a href="../pages/uwagi.html">Uwagi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <section id="login" class="default-section">
+
+      <div class="container">
+        <form action="https://httpbin.org/post" method="post">
+
+        <div class="heading-text">
+          <h2>Zaloguj się</h2>
+          <p>Wprowadź dane do konta, aby kontynuować</p>
+        </div>
+          
+          <label for="uzytkownik">E-mail lub nazwa użytkownika:</label>
+          <input type="text" id="uzytkownik" name="uzytkownik" maxlength="50" required autofocus>
+
+          <label for="haslo">Hasło:</label>
+          <input type="password" id="haslo" name="haslo" required>
+          <div class="row">
+            <label class="checkbox">
+              <input type="checkbox" name="zapamietaj">
+              Zapamiętaj mnie
+            </label>
+
+            <a class="forgot-password" href="#">Zapomniałeś hasła?</a>
+          </div>
+          
+          <button type="submit">Zaloguj</button>
+          <p class="register">Nie masz konta? <a href="#">Zarejestruj się</a></p>
+        </form>
+      <div>
+    </section>
+
+  </body>
+
+</html>

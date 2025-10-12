@@ -1,0 +1,195 @@
+/* <!-- -------------general------------- --> */
+:root
+{
+  /* <!-- ---general--- --> */
+  --shadow: 0 0 8px rgba(0,0,0,0.5);
+
+  /* <!-- ---light-mode--- --> */
+  --text: hsl(0, 0%, 5%);
+
+  /* <!-- ------form------ --> */
+  --form-bg: hsl(0 0% 100%);
+  --form-text: hsl(0, 0%, 5%);
+  --form-field-bg: #ffffff;
+  --form-field-border: #707070;
+  --form-field-border-style: solid;
+  --form-field-border-style-card: var(--form-field-border-size) var(--form-field-border-style) var(--form-field-border);
+  --form-field-color-scheme: light;
+  --kolor-bg: #e9e9e9;
+}
+
+/* <!-- -------------konkurs section------------- --> */
+#konkurs
+{
+  height: 100%;
+}
+
+.container {
+  background: #fff;
+  padding: 50px;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  width: 100%;
+}
+
+/* <!-- -------------form and form heading------------- --> */
+form {
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  background-color: var(--form-bg);
+  color: var(--form-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-heading
+{
+  display: flex;
+}
+
+.form-heading-text
+{
+  flex-basis: 90%;
+}
+
+.form-heading-icon
+{
+  flex-basis: 10%;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+input:hover, select:hover, fieldset:hover, input[type="color"]:hover, .sun:hover, .moon:hover, label:hover {
+  cursor: pointer;
+}
+
+/* <!-- -------------theme------------- --> */
+.theme-switch {
+  user-select: none;
+}
+
+.sun,
+.moon {
+  font-size: 40px;
+}
+
+.theme-switch .moon {
+  display: none;
+}
+
+#theme-toggle:checked + .theme-switch .sun {
+  display: none;
+}
+#theme-toggle:checked + .theme-switch .moon {
+  display: inline;
+}
+
+.container:has(#theme-toggle:checked)
+{
+  --form-bg: #1c1c1c;
+  --form-text: hsl(0 0% 95%);
+  --form-field-bg: #383838;
+  --form-field-border: #444444;
+  --form-field-border-size: 2px;
+  --form-field-border-style: inset;
+  --form-field-color-scheme: dark;
+  --kolor-bg: #383838;
+}
+
+/* <!-- -------------inputs------------- --> */
+label
+{
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 1px;
+}
+
+input, select {
+  font-size: 16px;
+  padding: 10px;
+  background-color: var(--form-field-bg);
+  color: var(--form-text);
+  border: var(--form-field-border-size) var(--form-field-border-style) var(--form-field-border);
+  margin-bottom: 17px;
+}
+
+#kategoria,
+#kolor
+{
+  border: 1px solid var(--form-field-border);
+}
+
+#kolor
+{
+  background-color: var(--kolor-bg);
+}
+
+input[type="color"] {
+  height: 42px;
+  width: 100%;
+  padding: 0px;
+  cursor: pointer;
+}
+
+#data{
+  color-scheme: var(--form-field-color-scheme);
+}
+
+/* <!-- -------------fieldset------------- --> */
+fieldset {
+  border: 2px solid #cbcbcb;
+  padding: 4px 16px;
+}
+
+legend {
+  background-color: var(--form-bg);
+  padding: 0px 12px;
+}
+
+.fieldset-checkbox
+{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 14px 0px;
+}
+
+input[type="radio"] {
+  margin: 0 4px 0 0;
+  cursor: pointer;
+}
+
+/* <!-- -------------bottom------------- --> */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0px;
+}
+
+input[type="checkbox"]
+{
+  margin: 0px;
+  border-radius: 0;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 18px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
