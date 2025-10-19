@@ -49,48 +49,6 @@ html
   justify-content: center;
 }
 
-/* <!-- -------------navigation menu------------- --> */
-nav
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  height: 80px;
-}
-
-nav ul li
-{
-  display: inline-block;
-  list-style: none;
-  margin: clamp(5px, 2vw, 10px) clamp(10px, 3vw, 20px);
-}
-
-nav ul li a
-{
-  color: var(--text);
-  text-decoration: none;
-  font-size: 1.25rem;
-  position: relative;
-}
-
-nav ul li a::after
-{
-  content: "";
-  width: 0;
-  height: 3px;
-  background: var(--primary);
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.4s;
-}
-
-nav ul li a:hover::after
-{
-  width: 100%;
-}
-
 /* <!-- -------------hero section------------- --> */
 .hero-text
 {
