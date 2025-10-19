@@ -1,1 +1,147 @@
-.
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta 
+      name="viewport" 
+      content="width=device-width, initial-scale=1.0" 
+    >
+    <title>Galeria Demo</title>
+    <link rel="stylesheet" href="../css/galeria.css" />
+    <link rel="stylesheet" href="../css/navbar.css" /> <!-- NAVBAR STYLES -->
+  </head>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navigation-menu">
+      <ul>
+        <li><a href="../../index.html">Strona główna</a></li>
+        <li><a href="../pages/flex.html">Flex</a></li>
+        <li><a href="../pages/grid.html">Grid</a></li>
+        <li><a href="../pages/galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <h1>Moja galeria</h1>
+
+    <section class="gallery">
+      <figure>
+        <picture>
+          <!-- >=1600px -->
+          <source type="image/avif" media="(min-width: 1600px)" srcset="../images/1000px/photo1-1000.avif">
+          <!-- 1200–1599px -->
+          <source type="image/avif" media="(min-width: 1200px)" srcset="../images/500px/photo1-500.avif">
+          <!-- 800–1199px -->
+          <source type="image/avif" media="(min-width: 800px)" srcset="../images/1000px/photo1-1000.avif">
+          <!-- <800px -->
+          <source type="image/avif" media="(max-width: 799px)" srcset="../images/500px/photo1-500.avif">
+          <!-- Fail safe -->
+          <img src="../images/1000px/photo1-1000.jpg" alt="Fale purpury">
+        </picture>
+        <figcaption>Fale purpury</figcaption>
+      </figure>
+
+      <figure>
+        <picture>
+          <source type="image/avif" media="(min-width: 1600px)" srcset="../images/1000px/photo2-1000.avif">
+          <source type="image/avif" media="(min-width: 1200px)" srcset="../images/500px/photo2-500.avif">
+          <source type="image/avif" media="(min-width: 800px)" srcset="../images/1000px/photo2-1000.avif">
+          <source type="image/avif" media="(max-width: 799px)" srcset="../images/500px/photo2-500.avif">
+          <img src="../images/1000px/photo2-1000.jpg" alt="Mistyczne wybrzeże">
+        </picture>
+        <figcaption>Mistyczne wybrzeże</figcaption>
+      </figure>
+
+      <figure>
+        <picture>
+          <source type="image/avif" media="(min-width: 1600px)" srcset="../images/1000px/photo3-1000.avif">
+          <source type="image/avif" media="(min-width: 1200px)" srcset="../images/500px/photo3-500.avif">
+          <source type="image/avif" media="(min-width: 800px)" srcset="../images/1000px/photo3-1000.avif">
+          <source type="image/avif" media="(max-width: 799px)" srcset="../images/500px/photo3-500.avif">
+          <img src="../images/1000px/photo3-1000.jpg" alt="Złote pasmo">
+        </picture>
+        <figcaption>Złote pasmo</figcaption>
+      </figure>
+
+      <figure>
+        <picture>
+          <source type="image/avif" media="(min-width: 1600px)" srcset="../images/1000px/photo4-1000.avif">
+          <source type="image/avif" media="(min-width: 1200px)" srcset="../images/500px/photo4-500.avif">
+          <source type="image/avif" media="(min-width: 800px)" srcset="../images/1000px/photo4-1000.avif">
+          <source type="image/avif" media="(max-width: 799px)" srcset="../images/500px/photo4-500.avif">
+          <img src="../images/1000px/photo4-1000.jpg" alt="Kwitnąca zorza">
+        </picture>
+        <figcaption>Kwitnąca zorza</figcaption>
+      </figure>
+
+      <figure>
+        <picture>
+          <source type="image/avif" media="(min-width: 1600px)" srcset="../images/1000px/photo5-1000.avif">
+          <source type="image/avif" media="(min-width: 1200px)" srcset="../images/500px/photo5-500.avif">
+          <source type="image/avif" media="(min-width: 800px)" srcset="../images/1000px/photo5-1000.avif">
+          <source type="image/avif" media="(max-width: 799px)" srcset="../images/500px/photo5-500.avif">
+          <img src="../images/1000px/photo5-1000.jpg" alt="Magmowe morze">
+        </picture>
+        <figcaption>Magmowe morze</figcaption>
+      </figure>
+
+      <figure>
+        <picture>
+          <source type="image/avif" media="(min-width: 1600px)" srcset="../images/1000px/photo6-1000.avif">
+          <source type="image/avif" media="(min-width: 1200px)" srcset="../images/500px/photo6-500.avif">
+          <source type="image/avif" media="(min-width: 800px)" srcset="../images/1000px/photo6-1000.avif">
+          <source type="image/avif" media="(max-width: 799px)" srcset="../images/500px/photo6-500.avif">
+          <img src="../images/1000px/photo6-1000.jpg" alt="Lodowa jaskinia">
+        </picture>
+        <figcaption>Lodowa jaskinia</figcaption>
+      </figure>
+
+      <figure>
+        <picture>
+          <source type="image/avif" media="(min-width: 1600px)" srcset="../images/1000px/photo7-1000.avif">
+          <source type="image/avif" media="(min-width: 1200px)" srcset="../images/500px/photo7-500.avif">
+          <source type="image/avif" media="(min-width: 800px)" srcset="../images/1000px/photo7-1000.avif">
+          <source type="image/avif" media="(max-width: 799px)" srcset="../images/500px/photo7-500.avif">
+          <img src="../images/1000px/photo7-1000.jpg" alt="Wszystko i nic">
+        </picture>
+        <figcaption>Wszystko i nic</figcaption>
+      </figure>
+
+      <figure>
+        <picture>
+          <source type="image/avif" media="(min-width: 1600px)" srcset="../images/1000px/photo8-1000.avif">
+          <source type="image/avif" media="(min-width: 1200px)" srcset="../images/500px/photo8-500.avif">
+          <source type="image/avif" media="(min-width: 800px)" srcset="../images/1000px/photo8-1000.avif">
+          <source type="image/avif" media="(max-width: 799px)" srcset="../images/500px/photo8-500.avif">
+          <img src="../images/1000px/photo8-1000.jpg" alt="Kontrast światów">
+        </picture>
+        <figcaption>Kontrast światów</figcaption>
+      </figure>
+
+      <figure>
+        <picture>
+          <source type="image/avif" media="(min-width: 1600px)" srcset="../images/1000px/photo9-1000.avif">
+          <source type="image/avif" media="(min-width: 1200px)" srcset="../images/500px/photo9-500.avif">
+          <source type="image/avif" media="(min-width: 800px)" srcset="../images/1000px/photo9-1000.avif">
+          <source type="image/avif" media="(max-width: 799px)" srcset="../images/500px/photo9-500.avif">
+          <img src="../images/1000px/photo9-1000.jpg" alt="Delikatna przestrzeń">
+        </picture>
+        <figcaption>Delikatna przestrzeń</figcaption>
+      </figure>
+
+      <figure>
+        <picture>
+          <source type="image/avif" media="(min-width: 1600px)" srcset="../images/1000px/photo10-1000.avif">
+          <source type="image/avif" media="(min-width: 1200px)" srcset="../images/500px/photo10-500.avif">
+          <source type="image/avif" media="(min-width: 800px)" srcset="../images/1000px/photo10-1000.avif">
+          <source type="image/avif" media="(max-width: 799px)" srcset="../images/500px/photo10-500.avif">
+          <img src="../images/1000px/photo10-1000.jpg" alt="Jaskrawa natura">
+        </picture>
+        <figcaption>Jaskrawa natura</figcaption>
+      </figure>
+    </section>
+
+  </body>
+</html>
