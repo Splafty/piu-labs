@@ -1,0 +1,281 @@
+/* Minimalny reset  */
+html
+{
+  font-size: 16px; /* bazowy rozmiar czcionki */
+  font-family: system-ui, sans-serif; /* font systemowy */
+  line-height: 1.5; /* lepsza czytelność */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* <!-- -------------general------------- --> */
+:root {
+  /* <!-- ---general--- --> */
+  --shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  --shadow-light: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  /* <!-- ---text--- --> */
+  --text: hsl(0, 0%, 5%);
+  --text-muted: hsl(0, 0%, 35%);
+  --text-bright: hsl(0, 0%, 95%);
+
+  /* <!-- ------shop------ --> */
+  --body-bg: #ffffff;
+  --product-container-bg: #eeeeee;
+  --image-bg: #fcfcfc;
+
+  --blue-accent: #1E5A9C;
+  --red-accent: #D32F2F;
+  --green-accent: #388E3C;
+  --yellow-accent: #FBC02D;
+
+  --blue-darker-accent: #174d88;
+  --red-darker-accent: #bd2424;
+  --green-darker-accent: #2d7a31;
+  --yellow-darker-accent: #f3b61c;
+
+  --current-color: 0;
+  --btn-hover-color: 0;
+}
+
+/* ------------------ layout ------------------ */
+body {
+  background-color: var(--body-bg);
+  color: var(--text);
+}
+
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 910px;
+  width: 100%;
+  gap: 30px;
+  padding: min(40px, 5vw);
+  margin: 20px;
+  justify-content: center;
+  background: var(--product-container-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow-light);
+}
+
+.default-section
+{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------ image ------------------ */
+.product-image {
+  border: 2px solid var(--current-color);
+  border-radius: 8px;
+  flex-basis: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: min(500px, 90vw);
+  background-color: var(--image-bg);
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------ info ------------------ */
+.product-info {
+  flex-basis: 3;
+  /* min-width: 300px;  */
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.promo {
+  background-color: var(--current-color);
+  color: var(--text-bright);
+  padding: 3px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.25s ease;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+/* ------------------ options section ------------------ */
+.options-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section
+{
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* ------------------ colors ------------------ */
+.color-options {
+  display: flex;
+  gap: 15px;
+}
+
+.color-options input[type="radio"] {
+  display: none;
+}
+
+.color-label {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid black;
+  box-shadow: 0px 0px 0px 1px white;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
+}
+
+.color-label:hover {
+  transform: scale(1.1);
+}
+
+.color-options input[type="radio"]:checked + .color-label {
+  box-shadow: inset 0px 0px 0px 4px white;
+}
+
+.color-blue { background: var(--blue-accent); }
+.color-red { background: var(--red-accent); }
+.color-green { background: var(--green-accent); }
+.color-yellow { background: var(--yellow-accent); }
+
+/* ------------------ blue ------------------ */
+body:has(#blue:checked) {
+  --current-color: var(--blue-accent);
+  --btn-hover-color: var(--blue-darker-accent);
+}
+
+/* ------------------ red ------------------ */
+body:has(#red:checked) {
+  --current-color: var(--red-accent);
+  --btn-hover-color: var(--red-darker-accent);
+}
+
+body:has(#red:checked) .product-image img {
+  content: url("../images/polo_r.png");
+}
+
+/* ------------------ green ------------------ */
+body:has(#green:checked) {
+  --current-color: var(--green-accent);
+  --btn-hover-color: var(--green-darker-accent);
+}
+
+body:has(#green:checked) .product-image img {
+  content: url("../images/polo_g.png");
+}
+
+/* ------------------ yellow ------------------ */
+body:has(#yellow:checked) {
+  --current-color: var(--yellow-accent);
+  --btn-hover-color: var(--yellow-darker-accent);
+}
+
+body:has(#yellow:checked) .product-image img {
+  content: url("../images/polo_y.png");
+}
+
+/* ------------------ sizes ------------------ */
+.size-options {
+  display: flex;
+  gap: 16px;
+}
+
+.size-options input[type="radio"] {
+  display: none;
+}
+
+.size-label {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 4px;
+  width: 42px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.size-options input[type="radio"]:checked + .size-label {
+  background: var(--current-color);
+  color: var(--text-bright);
+  transform: scale(1.15);
+}
+
+
+.size-options input[type="radio"] + .size-label:hover {
+  transform: scale(1.15);
+}
+
+/* ------------------ price ------------------ */
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 8px;
+  color: var(--text);
+}
+
+/* ------------------ button ------------------ */
+.add-to-cart {
+  border: 1px solid black;
+  background-color: var(--current-color);
+  color: var(--text-bright);
+  padding: 20px 36px;
+  border-radius: 6px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  margin-top: 20px;
+  box-shadow: var(--shadow-light);
+  width: fit-content;
+}
+
+.add-to-cart:hover {
+  background-color: var(--btn-hover-color);
+  transform: scale(1.05);
+}

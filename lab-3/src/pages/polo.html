@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta 
+      name="viewport" 
+      content="width=device-width, initial-scale=1.0" 
+    >
+    <title>Polo Demo</title>
+    <link rel="stylesheet" href="../css/polo.css" />
+    <link rel="stylesheet" href="../css/navbar.css" /> <!-- NAVBAR STYLES -->
+  </head>
+
+  <!-- MODYFICATIONS TO HTML OUTSIDE BODY (NAVBAR) -->
+  <header>
+    <nav class="navigation-menu">
+      <ul>
+        <li><a href="../../index.html">Strona główna</a></li>
+        <li><a href="../pages/polo.html">Polo</a></li>
+      </ul>
+    </nav>
+  </header>
+<body>
+  <section class="default-section">
+    <div class="product-card">
+      <div class="product-image">
+        <img src="../images/polo_b.png" alt="Koszulka Polo">
+      </div>
+
+      <div class="product-info">
+        <div>
+          <div class="product-header">
+            <h2>Koszulka Polo</h2>
+            <span class="promo">Promocja!</span>
+          </div>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quibusdam quis adipisci maiores.
+          </p>
+          <div class="options-section">
+            <div class="section">
+              <p>Kolor</p>
+              <div class="color-options">
+                <input type="radio" id="blue" name="color" checked>
+                <label for="blue" class="color-label color-blue"></label>
+
+                <input type="radio" id="red" name="color">
+                <label for="red" class="color-label color-red"></label>
+
+                <input type="radio" id="green" name="color">
+                <label for="green" class="color-label color-green"></label>
+
+                <input type="radio" id="yellow" name="color">
+                <label for="yellow" class="color-label color-yellow"></label>
+              </div>
+            </div>
+
+            <div class="section">
+              <p>Rozmiar</p>
+              <div class="size-options">
+                <input type="radio" id="size-s" name="size">
+                <label for="size-s" class="size-label">S</label>
+
+                <input type="radio" id="size-m" name="size" checked>
+                <label for="size-m" class="size-label">M</label>
+
+                <input type="radio" id="size-l" name="size">
+                <label for="size-l" class="size-label">L</label>
+
+                <input type="radio" id="size-xl" name="size">
+                <label for="size-xl" class="size-label">XL</label>
+              </div>
+            </div>
+
+            <div class="price">59,99 zł</div>
+          </div>
+        </div>
+
+        <button class="add-to-cart">🛒 Do koszyka</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
