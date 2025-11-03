@@ -1,0 +1,78 @@
+:root
+{
+  /* <!-- ---light-mode--- --> */
+  --primary: hsl(210, 100%, 60%);
+  --text: hsl(0, 0%, 5%);
+}
+
+/* <!-- -------------navigation menu------------- --> */
+header.main-nav-header
+{
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+
+nav.navigation-menu
+{
+  font-family: system-ui, sans-serif; /* font systemowy */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 80px;
+  background-color: white;
+  padding: 0 40px;
+  @media (max-width: 1000px)
+  {
+    padding: 0 20px;
+  }
+}
+
+nav.navigation-menu a.web-title
+{
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.375rem;
+  transition: 0.4s;
+}
+
+nav.navigation-menu a.web-title:hover
+{
+  color: var(--primary);
+}
+
+nav.navigation-menu ul li
+{
+  display: inline-block;
+  list-style: none;
+  margin: clamp(5px, 2vw, 10px) clamp(10px, 3vw, 20px);
+}
+
+nav.navigation-menu ul li a
+{
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: normal;
+  position: relative;
+  margin: 0;
+}
+
+nav.navigation-menu ul li a::after
+{
+  content: "";
+  width: 0;
+  height: 3px;
+  background: var(--primary);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.4s;
+}
+
+nav.navigation-menu ul li a:hover::after
+{
+  width: 100%;
+}

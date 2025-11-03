@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban</title>
+    <link rel="stylesheet" href="../css/kanban.css" />
+    <link rel="stylesheet" href="../css/navbar.css" /> <!-- NAVBAR STYLES -->
+  </head>
+
+  <header class="main-nav-header">
+    <nav class="navigation-menu">
+      <a class="web-title" href="../pages/kanban.html">Kanban - Lab 4</a>
+      <ul>
+        <li><a href="../../index.html">Strona główna</a></li>
+        <li><a href="../pages/kanban.html">Kanban</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+
+    <main id="board" class="board">
+      <section class="column" data-col-id="todo">
+        <div class="col-header">
+          <div class="col-title">
+            <div>Do zrobienia</div>
+            <span class="counter">0</span>
+          </div>
+          <div class="col-controls">
+            <button class="add-card btn small">Dodaj kartę</button>
+            <button class="color-col btn small">Koloruj kolumnę</button>
+            <button class="sort-col btn small">Sortuj</button>
+            <span class="sort-indicator">▲</span>
+          </div>
+        </div>
+        <div class="cards" data-col-id="todo"></div>
+      </section>
+
+      <section class="column" data-col-id="doing">
+        <div class="col-header">
+          <div class="col-title">
+            <div>W trakcie</div>
+            <span class="counter">0</span>
+          </div>
+          <div class="col-controls">
+            <button class="add-card btn small">Dodaj kartę</button>
+            <button class="color-col btn small">Koloruj kolumnę</button>
+            <button class="sort-col btn small">Sortuj</button>
+            <span class="sort-indicator">▲</span>
+          </div>
+        </div>
+        <div class="cards" data-col-id="doing"></div>
+      </section>
+
+      <section class="column" data-col-id="done">
+        <div class="col-header">
+          <div class="col-title">
+            <div>Zrobione</div>
+            <span class="counter">0</span>
+          </div>
+          <div class="col-controls">
+            <button class="add-card btn small">Dodaj kartę</button>
+            <button class="color-col btn small">Koloruj kolumnę</button>
+            <button class="sort-col btn small">Sortuj</button>
+            <span class="sort-indicator">▲</span>
+          </div>
+        </div>
+        <div class="cards" data-col-id="done"></div>
+      </section>
+    </main>
+    
+  </body>
+  
+  <footer>
+    <p>Piotr Henzolt &copy Copyright <span id="copyright-year"></span></p>
+  </footer>
+  
+  <script src="../js/app.js"></script>
+</html>
+
