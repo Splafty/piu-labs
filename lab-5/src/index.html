@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kształty</title>
+    <link rel="stylesheet" href="css/navbar.css" /> <!-- NAVBAR STYLES -->
+
+    <style>
+      nav.navigation-menu
+      {
+        justify-content: space-between !important;
+      }
+
+      html
+      {
+        display: flex;
+        flex-direction: column;
+      }
+
+      body
+      {
+        font-size: 16px; /* bazowy rozmiar czcionki */
+        font-family: system-ui, sans-serif; /* font systemowy */
+        line-height: 1.5; /* lepsza czytelność */
+        text-align: center;
+        background-color: #e7ebee;
+        margin: 0;
+      }
+
+      .controls
+      {
+        margin: 12px;
+      }
+
+      button
+      {
+        margin: 4px;
+        padding: 12px;
+        min-width: 150px;
+        cursor: pointer;
+      }
+
+      .counters
+      {
+        margin: 12px 0;
+      }
+
+      .board
+      {
+        margin: 12px auto;
+        max-width: 750px;
+        min-height: 160px;
+        border: 2px dashed #ccc;
+        padding: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        background: #fafafa;
+      }
+
+      .shape
+      {
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.3s;
+        border: 3px solid black;
+      }
+
+      .shape:hover
+      {
+        transform: scale(1.1);
+      }
+
+      .square
+      {
+        border-radius: 6px;
+      }
+
+      .circle
+      {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="main-nav-header">
+      <nav class="navigation-menu">
+        <a class="web-title" href="index.html">Kształty - Lab 5</a>
+        <ul>
+          <li><a href="../index.html">Strona główna</a></li>
+          <li><a href="index.html">Kształty</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="controls">
+      <button id="addSquare">Dodaj kwadrat</button>
+      <button id="addCircle">Dodaj kółko</button>
+      <button id="recolorSquares">Przekoloruj kwadraty</button>
+      <button id="recolorCircles">Przekoloruj kółka</button>
+    </div>
+
+    <div class="counters">
+      Kwadraty: <strong id="cntSquares">0</strong>
+      &nbsp;|&nbsp;
+      Kółka: <strong id="cntCircles">0</strong>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

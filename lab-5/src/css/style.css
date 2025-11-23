@@ -1,0 +1,113 @@
+/* Minimalny reset  */
+html
+{
+  font-size: 16px; /* bazowy rozmiar czcionki */
+  font-family: system-ui, sans-serif; /* font systemowy */
+  line-height: 1.5; /* lepsza czytelność */
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* <!-- -------------general------------- --> */
+:root
+{
+  /* <!-- ---general--- --> */
+  --shadow: 0 0 8px rgba(0,0,0,0.5);
+
+  /* <!-- ---light-mode--- --> */
+  --primary: hsl(210, 100%, 60%);
+  --bg-dark: hsl(0 0% 90%);
+  --text: hsl(0, 0%, 5%);
+  --text-bright: hsl(0 0% 95%);
+
+  /* <!-- ------form------ --> */
+  --form-bg: hsl(0 0% 100%);
+  --form-text: hsl(0, 0%, 5%);
+  --form-field-bg: #ffffff;
+  --form-field-border: #707070;
+  --form-field-border-size: 1px;
+  --form-field-border-style: solid;
+  --form-field-border-style-card: var(--form-field-border-size) var(--form-field-border-style) var(--form-field-border);
+  --form-field-color-scheme: light;
+}
+
+.default-section
+{
+  display: flex;
+  padding: 20px 0px;
+  height: calc(100vh - 80px);
+  width: 100%;
+  background-image: url(../images/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+/* <!-- -------------hero section------------- --> */
+.hero-text
+{
+  height: 100%;;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text h1
+{
+  color: var(--text-bright);
+  font-size: clamp(1.75rem, 0.25rem + 6vw, 4.5rem);
+  margin: 0;
+}
+
+.hero-text p
+{
+    margin-bottom: 40px;
+    font-size: clamp(1rem, 0.5rem + 1vw, 1.25rem);
+    color: var(--text-bright);
+    font-weight: 600;
+}
+
+.hero-text .hero-button
+{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: clamp(1rem, 0.125rem + 1.5vw, 1.25rem);
+  cursor: pointer;
+  padding: clamp(0.5rem, 1.5vh, 1rem) clamp(1rem, 5vw, 4rem);
+  background-color: var(--bg-dark);
+  color: var(--primary);
+  border-radius: 30px;
+  border: 0;
+  transition: 0.4s;
+}
+
+.hero-text .hero-button:hover
+{
+  padding: clamp(0.5rem, 1.5vh, 1rem) clamp(1.5rem, 7vw, 4.75rem);
+}
+
+.social-media
+{
+    margin-bottom: 20px;
+}
+
+.social-media i
+{
+    color: var(--text-bright);
+    cursor: pointer;
+    font-size: clamp(1.5rem, 2vw, 1.625rem);
+    margin: 10px;
+    transition: 0.4s;
+}
+
+.social-media i:hover
+{
+    transform: translateY(-5px);
+}
